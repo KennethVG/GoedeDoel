@@ -2,6 +2,7 @@ package be.vdab.goededoel.entities;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -40,6 +41,11 @@ public class GoedeDoelTest {
     @Test
     public void goedDoelVerschiltVanEenObjectMetEenAnderType() {
         assertNotEquals(doel, BigDecimal.ZERO);
+    }
+
+    @Test
+    public void GoedeDoelenDieGelijkZijnMoetenDezelfdeHashCodeTerugGeven() {
+        assertEquals(doel.hashCode(), new GoedeDoel("CliniClowns").hashCode());
     }
 
 }

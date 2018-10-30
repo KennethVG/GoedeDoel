@@ -25,7 +25,7 @@ public class GoedeDoel {
 
         GoedeDoel goedeDoel = (GoedeDoel) o;
 
-        return naam.equals(goedeDoel.naam);
+        return naam.equalsIgnoreCase(goedeDoel.naam);
     }
 
     @Override
