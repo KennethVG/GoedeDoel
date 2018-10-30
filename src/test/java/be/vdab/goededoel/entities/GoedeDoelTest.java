@@ -7,7 +7,6 @@ import org.junit.Test;
 
 import java.math.BigDecimal;
 
-
 public class GoedeDoelTest {
     private static final String NAAM = "CliniClowns";
     private GoedeDoel doel;
@@ -23,7 +22,7 @@ public class GoedeDoelTest {
     }
 
     @Test
-    public void failedTest(){
+    public void failedTest() {
         assertEquals(0, doel.getOpgebracht().compareTo(BigDecimal.ZERO));
     }
 
