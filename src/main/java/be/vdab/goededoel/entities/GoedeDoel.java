@@ -19,10 +19,17 @@ public class GoedeDoel {
     }
 
     @Override
-    public boolean equals(Object object) {
-        if (!(object instanceof GoedeDoel)) {
-            return false;
-        }
-        return ((GoedeDoel) object).naam.equalsIgnoreCase(this.naam);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof GoedeDoel)) return false;
+
+        GoedeDoel goedeDoel = (GoedeDoel) o;
+
+        return naam.equals(goedeDoel.naam);
+    }
+
+    @Override
+    public int hashCode() {
+        return naam.hashCode();
     }
 }
