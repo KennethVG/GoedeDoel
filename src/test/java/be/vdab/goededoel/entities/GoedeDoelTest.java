@@ -31,10 +31,15 @@ public class GoedeDoelTest {
     public void goedeDoelenMetDezelfdeNaamMoetenVolgensEqualsGelijkZijn() {
         assertEquals(new GoedeDoel("CLINICLOWNS"), doel);
     }
+
     @Test
-    public void goedeDoelenMetVerschillendeNaamMoetenVolgensEqualsVerschillendZijn()
-    {
+    public void goedeDoelenMetVerschillendeNaamMoetenVolgensEqualsVerschillendZijn() {
         assertNotEquals(new GoedeDoel("Unicef"), doel);
+    }
+
+    @Test
+    public void goedDoelVerschiltVanEenObjectMetEenAnderType() {
+        assertNotEquals(doel, BigDecimal.ZERO);
     }
 
 }
